@@ -1,13 +1,309 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Smart Tech Services | Oman</title>
-    <meta name="description" content="Technology solutions provider in Oman">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Tech Services SPC - DUNS Registered</title>
+    <style>
+        :root {
+            --color-primary: #1f4a6f;
+            --color-secondary: #2a6a96;
+            --color-accent: #32b8c6;
+            --color-bg: #f8f9fa;
+            --color-text: #1f1f1f;
+            --color-border: #e0e0e0;
+            --color-success: #4caf50;
+            --color-white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--color-text);
+            background-color: var(--color-bg);
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+            color: var(--color-white);
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 1.1em;
+            opacity: 0.95;
+            margin-bottom: 0;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .section {
+            background: var(--color-white);
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--color-border);
+        }
+
+        .section h2 {
+            color: var(--color-primary);
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--color-accent);
+        }
+
+        .section p {
+            margin-bottom: 15px;
+            line-height: 1.8;
+            font-size: 1em;
+        }
+
+        .duns-info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .duns-text h3 {
+            color: var(--color-secondary);
+            font-size: 1.4em;
+            margin-bottom: 15px;
+        }
+
+        .duns-text ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .duns-text ul li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .duns-text ul li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--color-success);
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        .qr-code-container {
+            text-align: center;
+            padding: 20px;
+            background: var(--color-bg);
+            border-radius: 8px;
+        }
+
+        .qr-code-container img {
+            max-width: 250px;
+            height: auto;
+            border: 2px solid var(--color-border);
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .qr-label {
+            font-size: 0.95em;
+            color: var(--color-text);
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .profile-link {
+            display: inline-block;
+            background: var(--color-accent);
+            color: var(--color-white);
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: background 0.3s ease;
+            margin-top: 15px;
+        }
+
+        .profile-link:hover {
+            background: var(--color-secondary);
+        }
+
+        .seal-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+            background: var(--color-bg);
+            border-radius: 8px;
+            min-height: 300px;
+        }
+
+        .seal-section p {
+            text-align: center;
+            color: var(--color-text);
+            margin-bottom: 20px;
+            font-size: 0.95em;
+        }
+
+        footer {
+            background: var(--color-primary);
+            color: var(--color-white);
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            font-size: 0.9em;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        .verification-badge {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            border: 2px solid var(--color-accent);
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .verification-badge h4 {
+            color: var(--color-primary);
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .verification-badge p {
+            color: var(--color-text);
+            margin: 5px 0;
+            font-size: 0.95em;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            .duns-info {
+                grid-template-columns: 1fr;
+            }
+
+            .section {
+                padding: 20px;
+            }
+
+            .container {
+                padding: 20px 15px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Smart Tech Services</h1>
-    <p>Technology Solutions Provider | Muscat, Oman</p>
-    <p>Contact: borhani@iSmartGCC.com</p>
-    <p>© 2025 Smart Tech Services. All Rights Reserved.</p>
+    <header>
+        <h1>Smart Tech Services SPC</h1>
+        <p>D-U-N-S® Registered | Leading Technology Solutions for Oman</p>
+    </header>
+
+    <div class="container">
+        <!-- Verification Section -->
+        <div class="section verification-badge">
+            <h4>✓ Verified D-U-N-S® Registered Company</h4>
+            <p><strong>3-Year Comprehensive DRS Certificate</strong></p>
+            <p>DUNS Number: 3197502 | Valid Registration Period: 3 Years</p>
+        </div>
+
+        <!-- About Section -->
+        <div class="section">
+            <h2>About Smart Tech Services</h2>
+            <p>Smart Tech Services SPC is a dynamic technology company based in Oman, specializing in innovative solutions and advanced technology implementations. We are proud to be D-U-N-S® Registered, confirming our company's credibility and business legitimacy.</p>
+            <p>Our commitment to excellence, transparency, and reliability has earned us recognition from Dun & Bradstreet, one of the world's most trusted business information providers.</p>
+        </div>
+
+        <!-- DUNS Registration Details -->
+        <div class="section">
+            <h2>D-U-N-S® Registration Benefits</h2>
+            <div class="duns-info">
+                <div class="duns-text">
+                    <h3>Why D-U-N-S® Registration?</h3>
+                    <ul>
+                        <li>Global business credibility and trust</li>
+                        <li>Enhanced supplier relationships</li>
+                        <li>Improved business opportunities</li>
+                        <li>Access to international trade</li>
+                        <li>Verified company information</li>
+                        <li>Professional recognition</li>
+                        <li>Streamlined business processes</li>
+                    </ul>
+                </div>
+                <div class="qr-code-container">
+                    <div class="qr-label">Smart Tech Services Profile QR Code</div>
+                    <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/6032fd8e-c8ee-4ecb-9f2b-5221930a84d6" alt="Smart Tech Services QR Code - DUNS Registered">
+                    <a href="https://dunsregistered.dnb.com/DunsRegisteredProfileAnywhere.aspx?Key1=3197502&PaArea=Email" target="_blank" class="profile-link">View Complete Profile</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- DRS Seal Section -->
+        <div class="section">
+            <h2>Dun & Bradstreet Recognition Seal</h2>
+            <p style="text-align: center; margin-bottom: 30px;">This website is verified and protected by Dun & Bradstreet's D-U-N-S® Registered seal. The seal below confirms our registration status:</p>
+            <div class="seal-section" id="seal-container">
+                <p style="margin-bottom: 0; font-style: italic;">D-U-N-S® Registered Seal Loading...</p>
+            </div>
+        </div>
+
+        <!-- Contact & Verification -->
+        <div class="section">
+            <h2>Verification & Contact Information</h2>
+            <p><strong>Company Name:</strong> Smart Tech Services SPC</p>
+            <p><strong>DUNS Number:</strong> 3197502</p>
+            <p><strong>Registration Type:</strong> Comprehensive DRS (3-Year Certificate)</p>
+            <p><strong>Location:</strong> Oman</p>
+            <p style="margin-top: 20px;"><strong>Verify Our Registration:</strong> Visit the D-U-N-S® Registered Profile at <a href="https://dunsregistered.dnb.com/DunsRegisteredProfileAnywhere.aspx?Key1=3197502&PaArea=Email" target="_blank" style="color: var(--color-secondary); text-decoration: underline;">dunsregistered.dnb.com</a></p>
+            <p style="margin-top: 10px; font-size: 0.9em; color: #666;">For inquiries about our DUNS registration or to verify our business credentials, please reference DUNS Number 3197502.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Smart Tech Services SPC. All rights reserved.</p>
+        <p>D-U-N-S® is a registered trademark of Dun & Bradstreet, Inc.</p>
+        <p>Certificate valid for 3 years from issuance date.</p>
+    </footer>
+
+    <!-- D-U-N-S Registered Seal Script (HTTPS) -->
+    <script language="JavaScript" src="https://dunsregistered.dnb.com/dunsregistered.js" type="text/javascript"></script>
+    
+    <!-- Alternative: Mini Seal Script (Uncomment to use instead) -->
+    <!-- <script language="JavaScript" src="https://dunsregistered.dnb.com/mini.js" type="text/javascript"></script> -->
+
+    <script>
+        // Log seal loading status
+        console.log('DUNS Registered seal script loaded');
+        
+        // Note: The seal will be dynamically injected by the external Dun & Bradstreet script
+        // It displays automatically when the page loads
+    </script>
 </body>
 </html>
