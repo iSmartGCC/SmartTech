@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Tech Services SPC - DUNS Registered</title>
+    <title>Smart Tech Services SPC - Digital Innovation & Advanced Technology</title>
     <style>
         :root {
             --color-primary: #1f4a6f;
@@ -44,13 +44,13 @@
         }
 
         header p {
-            font-size: 1.1em;
+            font-size: 1.05em;
             opacity: 0.95;
             margin-bottom: 0;
         }
 
         .container {
-            max-width: 1000px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 40px 20px;
         }
@@ -72,6 +72,13 @@
             border-bottom: 2px solid var(--color-accent);
         }
 
+        .section h3 {
+            color: var(--color-secondary);
+            font-size: 1.3em;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+
         .section p {
             margin-bottom: 15px;
             line-height: 1.8;
@@ -89,26 +96,6 @@
             color: var(--color-secondary);
             font-size: 1.4em;
             margin-bottom: 15px;
-        }
-
-        .duns-text ul {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        .duns-text ul li {
-            padding: 8px 0;
-            padding-left: 25px;
-            position: relative;
-        }
-
-        .duns-text ul li:before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: var(--color-success);
-            font-weight: bold;
-            font-size: 1.2em;
         }
 
         .qr-code-container {
@@ -149,24 +136,6 @@
             background: var(--color-secondary);
         }
 
-        .seal-section {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 40px 20px;
-            background: var(--color-bg);
-            border-radius: 8px;
-            min-height: 300px;
-        }
-
-        .seal-section p {
-            text-align: center;
-            color: var(--color-text);
-            margin-bottom: 20px;
-            font-size: 0.95em;
-        }
-
         footer {
             background: var(--color-primary);
             color: var(--color-white);
@@ -201,12 +170,61 @@
             font-size: 0.95em;
         }
 
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .grid-item {
+            background: var(--color-bg);
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid var(--color-accent);
+        }
+
+        .grid-item h4 {
+            color: var(--color-primary);
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .grid-item p {
+            margin-bottom: 0;
+            font-size: 0.95em;
+            line-height: 1.7;
+        }
+
+        .tag {
+            display: inline-block;
+            background: var(--color-accent);
+            color: var(--color-white);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            margin: 4px 4px 4px 0;
+            font-weight: 500;
+        }
+
+        .highlight-box {
+            margin-top: 25px;
+            padding: 15px;
+            background: linear-gradient(135deg, rgba(50,184,198,0.1) 0%, rgba(42,106,150,0.1) 100%);
+            border-radius: 8px;
+            border-left: 4px solid var(--color-accent);
+        }
+
         @media (max-width: 768px) {
             header h1 {
                 font-size: 1.8em;
             }
 
             .duns-info {
+                grid-template-columns: 1fr;
+            }
+
+            .grid-2 {
                 grid-template-columns: 1fr;
             }
 
@@ -223,7 +241,8 @@
 <body>
     <header>
         <h1>Smart Tech Services SPC</h1>
-        <p>D-U-N-S® Registered | Leading Technology Solutions for Oman</p>
+        <p>Advanced Electronics, Digital Transformation, Mobile Applications & Innovative Solutions</p>
+        <p style="font-size: 0.95em; opacity: 0.9; margin-top: 10px;">D-U-N-S® Registered | Oman</p>
     </header>
 
     <div class="container">
@@ -231,79 +250,184 @@
         <div class="section verification-badge">
             <h4>✓ Verified D-U-N-S® Registered Company</h4>
             <p><strong>3-Year Comprehensive DRS Certificate</strong></p>
-            <p>DUNS Number: 3197502 | Valid Registration Period: 3 Years</p>
+            <p>DUNS Number: 85-040-3286 | Business Registration: 1568459</p>
+            <p style="font-size: 0.9em; margin-top: 8px;">Valid: December 5, 2025 – December 4, 2028</p>
         </div>
 
         <!-- About Section -->
         <div class="section">
             <h2>About Smart Tech Services</h2>
-            <p>Smart Tech Services SPC is a dynamic technology company based in Oman, specializing in innovative solutions and advanced technology implementations. We are proud to be D-U-N-S® Registered, confirming our company's credibility and business legitimacy.</p>
-            <p>Our commitment to excellence, transparency, and reliability has earned us recognition from Dun & Bradstreet, one of the world's most trusted business information providers.</p>
+            <p><strong>Smart Tech Services SPC</strong> is an innovation-focused technology company based in Oman. We develop advanced digital products, conduct cutting-edge research and development, and deliver practical technology solutions for businesses, educational institutions, and communities.</p>
+
+            <p>Our expertise spans multiple domains: advanced electronics, renewable energy technologies, AI-powered applications, synthetic biotechnology, IoT solutions, satellite systems, and digital transformation initiatives. We combine software engineering, hardware innovation, data analytics, and user-centric design to address real-world challenges.</p>
+
+            <h3>Our Portfolio & Capabilities</h3>
+            
+            <div class="grid-2">
+                <div class="grid-item">
+                    <h4>🚀 Research & Development</h4>
+                    <p>
+                        Advanced research in AI, robotics, computer vision, synthetic biology, renewable energy, and emerging technologies including hydrogen production, biodegradable materials, and climate monitoring solutions.
+                    </p>
+                </div>
+                
+                <div class="grid-item">
+                    <h4>📱 Mobile & AI Applications</h4>
+                    <p>
+                        Smart applications including iMedico (telehealth), iCloset (outfit selection), iBrush (orthodontic tracking), iPCare (plant health), iTherapy (psychology services), iConnect (business meetings & notes), and more on major app stores.
+                    </p>
+                </div>
+                
+                <div class="grid-item">
+                    <h4>🔬 Advanced Electronics & Hardware</h4>
+                    <p>
+                        Design and implementation of advanced electronics, RFID systems, IoT devices, sensor technology, monitoring systems, and smart hardware solutions for various industrial and consumer applications.
+                    </p>
+                </div>
+                
+                <div class="grid-item">
+                    <h4>🛰️ Space & Education Technology</h4>
+                    <p>
+                        Satellite systems, CubeSat constellations, GeoLocator technology, microprocessor development, and educational initiatives supporting hands-on learning in space technology and engineering.
+                    </p>
+                </div>
+                
+                <div class="grid-item">
+                    <h4>🤝 Strategic Consulting & Implementation</h4>
+                    <p>
+                        Solution design, systems integration, technology consulting, vendor partnerships, component procurement, and ongoing technical support for digital transformation projects across sectors.
+                    </p>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                <p><strong>Our Mission:</strong> Transform industries and improve lives through innovative technology—from advanced AI and mobile applications to sustainable energy solutions and smart systems. We bridge research and real-world implementation.</p>
+            </div>
+        </div>
+
+        <!-- Featured Products & Projects -->
+        <div class="section">
+            <h2>Featured Applications & Products</h2>
+            
+            <h3>i-Projects Series</h3>
+            <p>Our portfolio of intelligent applications designed for modern needs:</p>
+            <div style="margin: 15px 0;">
+                <span class="tag">iMedico - Telehealth</span>
+                <span class="tag">iCloset - Fashion AI</span>
+                <span class="tag">iPCare - Plant Health</span>
+                <span class="tag">iTherapy - Psychology</span>
+                <span class="tag">iConnect - Business Tools</span>
+            </div>
+
+            <h3 style="margin-top: 30px;">Technology Domains</h3>
+            <p>Our specialized areas of expertise and innovation:</p>
+            <div style="margin: 15px 0;">
+                <span class="tag">AI & Machine Learning</span>
+                <span class="tag">Computer Vision</span>
+                <span class="tag">IoT & V2X</span>
+                <span class="tag">Satellite Systems</span>
+                <span class="tag">RFID & NFC</span>
+                <span class="tag">Blockchain & Crypto</span>
+                <span class="tag">Climate Monitoring</span>
+            </div>
+
+            <h3 style="margin-top: 30px;">Strategic Initiatives</h3>
+            <p>Major projects and innovation areas:</p>
+            <div style="margin: 15px 0;">
+                <span class="tag">Virtual Power Plants</span>
+                <span class="tag">CubeSat Constellations</span>
+                <span class="tag">DDoS Mitigation</span>
+                <span class="tag">Tourism Payment Systems</span>
+                <span class="tag">Cultural NFT Integration</span>
+                <span class="tag">Solar Drone Monitoring</span>
+            </div>
         </div>
 
         <!-- DUNS Registration Details -->
         <div class="section">
-            <h2>D-U-N-S® Registration Benefits</h2>
+            <h2>D-U-N-S® Registration & Verification</h2>
             <div class="duns-info">
                 <div class="duns-text">
-                    <h3>Why D-U-N-S® Registration?</h3>
-                    <ul>
-                        <li>Global business credibility and trust</li>
-                        <li>Enhanced supplier relationships</li>
-                        <li>Improved business opportunities</li>
-                        <li>Access to international trade</li>
-                        <li>Verified company information</li>
-                        <li>Professional recognition</li>
-                        <li>Streamlined business processes</li>
-                    </ul>
+                    <h3>Trusted Business Identity</h3>
+                    <p style="margin-bottom: 15px; font-size: 0.95em;">Our company holds a comprehensive D-U-N-S® registration, confirming our credibility and commitment to professional business standards recognized globally by Dun &amp; Bradstreet.</p>
+                    <p style="margin-top: 0; padding: 15px; background: var(--color-bg); border-radius: 6px; border-left: 3px solid var(--color-success); font-size: 0.95em;">
+                        <strong>DUNS Number:</strong> 85-040-3286<br>
+                        <strong>Business Registration:</strong> 1568459<br>
+                        <strong>Valid:</strong> December 5, 2025 – December 4, 2028
+                    </p>
                 </div>
                 <div class="qr-code-container">
-                    <div class="qr-label">Smart Tech Services Profile QR Code</div>
-                    <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/6032fd8e-c8ee-4ecb-9f2b-5221930a84d6" alt="Smart Tech Services QR Code - DUNS Registered">
-                    <a href="https://dunsregistered.dnb.com/DunsRegisteredProfileAnywhere.aspx?Key1=3197502&PaArea=Email" target="_blank" class="profile-link">View Complete Profile</a>
+                    <div class="qr-label">Scan to View Our D-U-N-S® Profile</div>
+                    <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/6032fd8e-c8ee-4ecb-9f2b-5221930a84d6" alt="Smart Tech Services QR Code - Scan for DUNS Registered Profile">
+                    <p style="font-size: 0.85em; color: #666; margin: 12px 0;">QR code links directly to our online profile.</p>
+                    <a href="https://dunsregistered.dnb.com/DunsRegisteredProfileAnywhere.aspx?Key1=85-040-3286&PaArea=Email" target="_blank" class="profile-link">View Verification Profile</a>
+                    <p style="font-size: 0.8em; color: #999; margin-top: 10px;">Official D-U-N-S® Registered platform</p>
                 </div>
             </div>
         </div>
 
-        <!-- DRS Seal Section -->
+        <!-- Company Information & Contact -->
         <div class="section">
-            <h2>Dun & Bradstreet Recognition Seal</h2>
-            <p style="text-align: center; margin-bottom: 30px;">This website is verified and protected by Dun & Bradstreet's D-U-N-S® Registered seal. The seal below confirms our registration status:</p>
-            <div class="seal-section" id="seal-container">
-                <p style="margin-bottom: 0; font-style: italic;">D-U-N-S® Registered Seal Loading...</p>
+            <h2>Company Information</h2>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 25px;">
+                <div>
+                    <h3 style="font-size: 1.1em;">📍 Details</h3>
+                    <p><strong>Company Name:</strong> Smart Tech Services SPC</p>
+                    <p><strong>Business Registration:</strong> 1568459</p>
+                    <p><strong>DUNS Number:</strong> 85-040-3286</p>
+                    <p><strong>Validity:</strong> December 5, 2025 – December 4, 2028</p>
+                    <p><strong>Country:</strong> Oman</p>
+                </div>
+                
+                <div>
+                    <h3 style="font-size: 1.1em;">✓ How to Verify</h3>
+                    <p><strong>D-U-N-S® Registry:</strong></p>
+                    <p style="margin: 10px 0;">
+                        <a href="https://dunsregistered.dnb.com" target="_blank" style="color: var(--color-accent); text-decoration: none; font-weight: 600;">
+                            dunsregistered.dnb.com →
+                        </a>
+                    </p>
+                    
+                    <p style="margin-top: 15px;"><strong>Reference Number:</strong></p>
+                    <p style="background: var(--color-bg); padding: 12px; border-radius: 6px; font-family: monospace; font-weight: 600; color: var(--color-primary); text-align: center; margin: 10px 0;">
+                        85-040-3286
+                    </p>
+                </div>
             </div>
-        </div>
+            
+            <div style="background: linear-gradient(135deg, rgba(76,175,80,0.1) 0%, rgba(50,184,198,0.1) 100%); padding: 20px; border-radius: 8px; border-left: 4px solid var(--color-success); margin-top: 20px;">
+                <p style="margin: 0; font-size: 0.9em;">
+                    Smart Tech Services continues to expand its portfolio of innovative products and applications across multiple technology domains. From mobile applications to advanced hardware, AI solutions, and cutting-edge technology innovation, we're committed to delivering technology that matters.
+                </p>
+            </div>
 
-        <!-- Contact & Verification -->
-        <div class="section">
-            <h2>Verification & Contact Information</h2>
-            <p><strong>Company Name:</strong> Smart Tech Services SPC</p>
-            <p><strong>DUNS Number:</strong> 3197502</p>
-            <p><strong>Registration Type:</strong> Comprehensive DRS (3-Year Certificate)</p>
-            <p><strong>Location:</strong> Oman</p>
-            <p style="margin-top: 20px;"><strong>Verify Our Registration:</strong> Visit the D-U-N-S® Registered Profile at <a href="https://dunsregistered.dnb.com/DunsRegisteredProfileAnywhere.aspx?Key1=3197502&PaArea=Email" target="_blank" style="color: var(--color-secondary); text-decoration: underline;">dunsregistered.dnb.com</a></p>
-            <p style="margin-top: 10px; font-size: 0.9em; color: #666;">For inquiries about our DUNS registration or to verify our business credentials, please reference DUNS Number 3197502.</p>
+            <!-- Contact Section -->
+            <div style="background: linear-gradient(135deg, rgba(50,184,198,0.15) 0%, rgba(42,106,150,0.15) 100%); padding: 20px; border-radius: 8px; border-left: 4px solid var(--color-accent); margin-top: 20px;">
+                <h3 style="font-size: 1.1em; color: var(--color-primary); margin-bottom: 10px;">📧 Contact Us</h3>
+                <p style="margin: 0; font-size: 0.95em;">
+                    For inquiries, partnerships, or more information about our services:<br>
+                    <strong>Email:</strong> <a href="mailto:support@iSmartGCC.com" style="color: var(--color-accent); font-weight: 600; text-decoration: none;">support@iSmartGCC.com</a>
+                </p>
+            </div>
         </div>
     </div>
 
     <footer>
-        <p>&copy; 2024 Smart Tech Services SPC. All rights reserved.</p>
-        <p>D-U-N-S® is a registered trademark of Dun & Bradstreet, Inc.</p>
-        <p>Certificate valid for 3 years from issuance date.</p>
+        <p>&copy; 2025 Smart Tech Services SPC. All rights reserved.</p>
+        <p>Oman | Advanced Technology & Digital Innovation</p>
+        <p>D-U-N-S® is a registered trademark of Dun &amp; Bradstreet, Inc.</p>
+        <p>DUNS: 85-040-3286 | Valid December 5, 2025 – December 4, 2028</p>
+        <p style="margin-top: 10px; font-size: 0.85em; opacity: 0.9;">
+            Specializing in AI, Mobile Applications, Advanced Electronics, IoT, Satellite Systems &amp; Digital Transformation
+        </p>
     </footer>
 
     <!-- D-U-N-S Registered Seal Script (HTTPS) -->
     <script language="JavaScript" src="https://dunsregistered.dnb.com/dunsregistered.js" type="text/javascript"></script>
-    
-    <!-- Alternative: Mini Seal Script (Uncomment to use instead) -->
-    <!-- <script language="JavaScript" src="https://dunsregistered.dnb.com/mini.js" type="text/javascript"></script> -->
 
     <script>
-        // Log seal loading status
-        console.log('DUNS Registered seal script loaded');
-        
-        // Note: The seal will be dynamically injected by the external Dun & Bradstreet script
-        // It displays automatically when the page loads
+        console.log('Smart Tech Services website loaded');
     </script>
 </body>
 </html>
