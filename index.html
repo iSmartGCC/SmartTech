@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Google Search Console Verification -->
+    <meta name="google-site-verification" content="TFYBeJeTjGp6c60mz8MIeE421FzXClfiWhFV7-xNJRw" />
+    
     <title>Smart Tech Services SPC - Digital Innovation & Advanced Technology</title>
     <style>
         :root {
@@ -27,6 +31,42 @@
             line-height: 1.6;
             color: var(--color-text);
             background-color: var(--color-bg);
+        }
+
+        nav {
+            background: var(--color-primary);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        nav li {
+            margin: 0;
+        }
+
+        nav a {
+            display: block;
+            padding: 15px 18px;
+            color: var(--color-white);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95em;
+            transition: background 0.3s ease;
+        }
+
+        nav a:hover {
+            background: var(--color-accent);
         }
 
         header {
@@ -85,95 +125,17 @@
             font-size: 1em;
         }
 
-        .duns-info {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-            align-items: center;
-        }
-
-        .duns-text h3 {
-            color: var(--color-secondary);
-            font-size: 1.4em;
-            margin-bottom: 15px;
-        }
-
-        .qr-code-container {
-            text-align: center;
-            padding: 20px;
-            background: var(--color-bg);
-            border-radius: 8px;
-        }
-
-        .qr-code-container img {
-            max-width: 250px;
-            height: auto;
-            border: 2px solid var(--color-border);
-            border-radius: 8px;
-            margin-bottom: 15px;
-        }
-
-        .qr-label {
-            font-size: 0.95em;
-            color: var(--color-text);
-            font-weight: 600;
-            margin-bottom: 10px;
-        }
-
-        .profile-link {
-            display: inline-block;
-            background: var(--color-accent);
-            color: var(--color-white);
-            padding: 12px 24px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: 600;
-            transition: background 0.3s ease;
-            margin-top: 15px;
-        }
-
-        .profile-link:hover {
-            background: var(--color-secondary);
-        }
-
-        footer {
-            background: var(--color-primary);
-            color: var(--color-white);
-            text-align: center;
-            padding: 20px;
-            margin-top: 40px;
-            font-size: 0.9em;
-        }
-
-        footer p {
-            margin: 5px 0;
-        }
-
-        .verification-badge {
-            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
-            border: 2px solid var(--color-accent);
-            border-radius: 8px;
-            padding: 20px;
-            margin: 20px 0;
-            text-align: center;
-        }
-
-        .verification-badge h4 {
-            color: var(--color-primary);
-            margin-bottom: 10px;
-            font-size: 1.1em;
-        }
-
-        .verification-badge p {
-            color: var(--color-text);
-            margin: 5px 0;
-            font-size: 0.95em;
-        }
-
         .grid-2 {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 25px;
+            margin-top: 20px;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
             margin-top: 20px;
         }
 
@@ -215,17 +177,185 @@
             border-left: 4px solid var(--color-accent);
         }
 
+        .contact-form {
+            background: var(--color-bg);
+            padding: 25px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+            color: var(--color-primary);
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid var(--color-border);
+            border-radius: 5px;
+            font-family: inherit;
+            font-size: 1em;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--color-accent);
+            box-shadow: 0 0 5px rgba(50, 184, 198, 0.3);
+        }
+
+        .submit-btn {
+            background: var(--color-accent);
+            color: var(--color-white);
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            font-size: 1em;
+        }
+
+        .submit-btn:hover {
+            background: var(--color-secondary);
+        }
+
+        .submit-btn:disabled {
+            background: #999;
+            cursor: not-allowed;
+        }
+
+        .map-container {
+            margin-top: 20px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 400px;
+            border: none;
+        }
+
+        .duns-info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .qr-code-container {
+            text-align: center;
+            padding: 20px;
+            background: var(--color-bg);
+            border-radius: 8px;
+        }
+
+        .qr-code-container img {
+            max-width: 200px;
+            height: auto;
+            border: 2px solid var(--color-border);
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .profile-link {
+            display: inline-block;
+            background: var(--color-accent);
+            color: var(--color-white);
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: background 0.3s ease;
+            margin-top: 15px;
+        }
+
+        .profile-link:hover {
+            background: var(--color-secondary);
+        }
+
+        .status-message {
+            padding: 12px;
+            border-radius: 5px;
+            margin-top: 10px;
+            display: none;
+            font-weight: 500;
+        }
+
+        .status-message.success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .status-message.error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        footer {
+            background: var(--color-primary);
+            color: var(--color-white);
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 40px;
+            font-size: 0.9em;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        .form-note {
+            background: #e3f2fd;
+            border-left: 4px solid var(--color-accent);
+            padding: 12px;
+            border-radius: 4px;
+            margin-top: 15px;
+            font-size: 0.9em;
+            color: #1565c0;
+        }
+
         @media (max-width: 768px) {
             header h1 {
                 font-size: 1.8em;
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav a {
+                padding: 12px 20px;
+            }
+
+            .grid-2, .grid-3 {
+                grid-template-columns: 1fr;
             }
 
             .duns-info {
                 grid-template-columns: 1fr;
             }
 
-            .grid-2 {
-                grid-template-columns: 1fr;
+            .map-container iframe {
+                height: 300px;
             }
 
             .section {
@@ -239,7 +369,21 @@
     </style>
 </head>
 <body>
-    <header>
+    <!-- Navigation Menu -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#location">Location</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header -->
+    <header id="home">
         <h1>Smart Tech Services SPC</h1>
         <p>Advanced Electronics, Digital Transformation, Mobile Applications & Innovative Solutions</p>
         <p style="font-size: 0.95em; opacity: 0.9; margin-top: 10px;">D-U-N-S® Registered | Oman</p>
@@ -247,48 +391,37 @@
 
     <div class="container">
         <!-- About Section -->
-        <div class="section">
+        <div class="section" id="about">
             <h2>About Smart Tech Services</h2>
             <p><strong>Smart Tech Services SPC</strong> is an innovation-focused technology company based in Oman. We develop advanced digital products, conduct cutting-edge research and development, and deliver practical technology solutions for businesses, educational institutions, and communities.</p>
 
             <p>Our expertise spans multiple domains: advanced electronics, AI-powered applications, IoT solutions, satellite systems, and digital transformation initiatives. We combine software engineering, hardware innovation, data analytics, and user-centric design to address real-world challenges.</p>
 
             <h3>Our Portfolio & Capabilities</h3>
-            
             <div class="grid-2">
                 <div class="grid-item">
                     <h4>🚀 Research & Development</h4>
-                    <p>
-                        Advanced research in AI, robotics, computer vision, emerging technologies, and cutting-edge innovation to deliver solutions for complex business and technical challenges.
-                    </p>
+                    <p>Advanced research in AI, robotics, computer vision, emerging technologies, and cutting-edge innovation.</p>
                 </div>
-                
                 <div class="grid-item">
                     <h4>📱 Mobile & AI Applications</h4>
-                    <p>
-                        Smart applications including iMedico (telehealth), iCloset (outfit selection), iPCare (plant health), iTherapy (psychology services), iConnect (business meetings & notes), and more on major app stores.
-                    </p>
+                    <p>Smart applications: iMedico, iCloset, iPCare, iTherapy, iConnect, and more on major app stores.</p>
                 </div>
-                
                 <div class="grid-item">
                     <h4>🔬 Advanced Electronics & Hardware</h4>
-                    <p>
-                        Design and implementation of advanced electronics, RFID systems, IoT devices, sensor technology, monitoring systems, and smart hardware solutions for various industrial and consumer applications.
-                    </p>
+                    <p>Design and implementation of RFID systems, IoT devices, sensor technology, and smart solutions.</p>
                 </div>
-                
                 <div class="grid-item">
                     <h4>🛰️ Space & Education Technology</h4>
-                    <p>
-                        Satellite systems, CubeSat constellations, GeoLocator technology, microprocessor development, and educational initiatives supporting hands-on learning in space technology and engineering.
-                    </p>
+                    <p>Satellite systems, CubeSat constellations, GeoLocator, and educational initiatives in space engineering.</p>
                 </div>
-                
                 <div class="grid-item">
-                    <h4>🤝 Strategic Consulting & Implementation</h4>
-                    <p>
-                        Solution design, systems integration, technology consulting, vendor partnerships, component procurement, and ongoing technical support for digital transformation projects across sectors.
-                    </p>
+                    <h4>🤝 Strategic Consulting</h4>
+                    <p>Solution design, systems integration, technology consulting, vendor partnerships, and support.</p>
+                </div>
+                <div class="grid-item">
+                    <h4>💼 Sector Expertise</h4>
+                    <p>Digital transformation across multiple industries with proven implementation methodologies.</p>
                 </div>
             </div>
 
@@ -298,7 +431,7 @@
         </div>
 
         <!-- Featured Products & Projects -->
-        <div class="section">
+        <div class="section" id="products">
             <h2>Featured Applications & Products</h2>
             
             <h3>i-Projects Series</h3>
@@ -334,11 +467,42 @@
             </div>
         </div>
 
+        <!-- Services Section -->
+        <div class="section" id="services">
+            <h2>Our Services</h2>
+            <div class="grid-3">
+                <div class="grid-item">
+                    <h4>🛠️ Technical Support</h4>
+                    <p>24/7 technical assistance and ongoing maintenance for all our solutions and implementations.</p>
+                </div>
+                <div class="grid-item">
+                    <h4>📊 Data Analytics</h4>
+                    <p>Advanced analytics and insights to drive informed business decisions and optimize operations.</p>
+                </div>
+                <div class="grid-item">
+                    <h4>🔐 Cybersecurity</h4>
+                    <p>Comprehensive security solutions protecting your digital assets from emerging threats.</p>
+                </div>
+                <div class="grid-item">
+                    <h4>☁️ Cloud Solutions</h4>
+                    <p>Scalable cloud infrastructure and services tailored to your business requirements.</p>
+                </div>
+                <div class="grid-item">
+                    <h4>🎓 Training & Development</h4>
+                    <p>Professional training programs and skill development for your team and organization.</p>
+                </div>
+                <div class="grid-item">
+                    <h4>📦 Custom Development</h4>
+                    <p>Bespoke software and hardware solutions designed specifically for your business needs.</p>
+                </div>
+            </div>
+        </div>
+
         <!-- DUNS Registration Details -->
-        <div class="section">
+        <div class="section" id="portfolio">
             <h2>D-U-N-S® Registration & Verification</h2>
             <div class="duns-info">
-                <div class="duns-text">
+                <div>
                     <h3>Trusted Business Identity</h3>
                     <p style="margin-bottom: 15px; font-size: 0.95em;">Our company holds a comprehensive D-U-N-S® registration, confirming our credibility and commitment to professional business standards recognized globally by Dun &amp; Bradstreet.</p>
                     <p style="margin-top: 0; padding: 15px; background: var(--color-bg); border-radius: 6px; border-left: 3px solid var(--color-success); font-size: 0.95em;">
@@ -348,40 +512,82 @@
                     </p>
                 </div>
                 <div class="qr-code-container">
-                    <div class="qr-label">Scan to View Our D-U-N-S® Profile</div>
-                    <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/6032fd8e-c8ee-4ecb-9f2b-5221930a84d6" alt="Smart Tech Services QR Code - Scan for DUNS Registered Profile">
-                    <p style="font-size: 0.85em; color: #666; margin: 12px 0;">QR code links directly to our online profile.</p>
-                    <a href="https://dunsregistered.dnb.com/DunsRegisteredProfileAnywhere.aspx?Key1=85-040-3286&PaArea=Email" target="_blank" class="profile-link">View Verification Profile</a>
-                    <p style="font-size: 0.8em; color: #999; margin-top: 10px;">Official D-U-N-S® Registered platform</p>
+                    <div style="font-size: 0.95em; color: var(--color-text); font-weight: 600; margin-bottom: 10px;">Scan to View Our D-U-N-S® Profile</div>
+                    <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/6032fd8e-c8ee-4ecb-9f2b-5221930a84d6" alt="Smart Tech Services QR Code">
+                    <p style="font-size: 0.85em; color: #666; margin: 12px 0;">QR code links to our online profile</p>
+                    <a href="https://dunsregistered.dnb.com/DunsRegisteredProfileAnywhere.aspx?Key1=85-040-3286&PaArea=Email" target="_blank" class="profile-link">View Verification</a>
                 </div>
             </div>
         </div>
 
-        <!-- Company Information & Contact -->
-        <div class="section">
-            <h2>Company Information</h2>
-            
-            <div style="margin-bottom: 25px;">
-                <h3 style="font-size: 1.1em;">📍 Contact Information</h3>
-                <p><strong>Company Name:</strong> Smart Tech Services SPC</p>
+        <!-- Location & Map Section -->
+        <div class="section" id="location">
+            <h2>Our Location</h2>
+            <div style="margin-bottom: 20px;">
+                <h3 style="font-size: 1.1em;">📍 Smart Tech Services SPC</h3>
                 <p><strong>Address:</strong> #12, Down Town, 1, 3933 Way, A2392, Al Khuwayr South, Muscat, Oman</p>
                 <p><strong>Mobile & WhatsApp:</strong> <a href="tel:+96879128777" style="color: var(--color-accent); text-decoration: none; font-weight: 600;">+968 7912 8777</a></p>
-                <p><strong>Business Registration:</strong> 1568459</p>
+                <p><strong>Email:</strong> <a href="mailto:support@iSmartGCC.com" style="color: var(--color-accent); text-decoration: none; font-weight: 600;">support@iSmartGCC.com</a></p>
             </div>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3669.7845789956847!2d58.33426!3d21.51892!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1sAl%20Khuwayr%20South%2C%20Muscat%2C%20Oman!2s21.51892,58.33426!5e0!3m2!1sen!2som!4v1702000000000" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+
+        <!-- Contact Form Section -->
+        <div class="section" id="contact">
+            <h2>Contact Us</h2>
+            <p>Have a question or want to discuss a project? Fill out the form below and we'll get back to you within 24 hours.</p>
             
-            <div style="background: linear-gradient(135deg, rgba(76,175,80,0.1) 0%, rgba(50,184,198,0.1) 100%); padding: 20px; border-radius: 8px; border-left: 4px solid var(--color-success); margin-top: 20px;">
-                <p style="margin: 0; font-size: 0.9em;">
-                    Smart Tech Services continues to expand its portfolio of innovative products and applications across multiple technology domains. From mobile applications to advanced hardware, AI solutions, and cutting-edge technology innovation, we're committed to delivering technology that matters.
-                </p>
+            <div class="contact-form">
+                <form id="contactForm" onsubmit="handleSubmit(event)">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="company">Company Name</label>
+                            <input type="text" id="company" name="company">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject *</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn" id="submitBtn">Send Message</button>
+                    <div id="formStatus" class="status-message"></div>
+                </form>
+
+                <div class="form-note">
+                    <strong>📧 Note:</strong> Your message will be sent directly to borhani@iSmartGCC.com. We'll respond to your provided email address within 24 hours.
+                </div>
             </div>
 
-            <!-- Contact Section -->
-            <div style="background: linear-gradient(135deg, rgba(50,184,198,0.15) 0%, rgba(42,106,150,0.15) 100%); padding: 20px; border-radius: 8px; border-left: 4px solid var(--color-accent); margin-top: 20px;">
-                <h3 style="font-size: 1.1em; color: var(--color-primary); margin-bottom: 10px;">📧 Contact Us</h3>
-                <p style="margin: 0; font-size: 0.95em;">
-                    For inquiries, partnerships, or more information about our services:<br>
-                    <strong>Email:</strong> <a href="mailto:support@iSmartGCC.com" style="color: var(--color-accent); font-weight: 600; text-decoration: none;">support@iSmartGCC.com</a>
-                </p>
+            <div style="background: linear-gradient(135deg, rgba(76,175,80,0.1) 0%, rgba(50,184,198,0.1) 100%); padding: 20px; border-radius: 8px; border-left: 4px solid var(--color-success); margin-top: 25px;">
+                <h3 style="color: var(--color-primary); margin-bottom: 10px;">Quick Contact Information</h3>
+                <p style="margin: 5px 0;"><strong>📱 Mobile & WhatsApp:</strong> +968 7912 8777</p>
+                <p style="margin: 5px 0;"><strong>📧 Email:</strong> support@iSmartGCC.com</p>
+                <p style="margin: 5px 0;"><strong>📍 Address:</strong> #12, Down Town, 1, 3933 Way, A2392, Al Khuwayr South, Muscat, Oman</p>
+                <p style="margin: 5px 0;"><strong>🏢 Registration:</strong> Business Reg: 1568459 | DUNS: 85-040-3286</p>
             </div>
         </div>
     </div>
@@ -390,15 +596,88 @@
         <p>&copy; 2025 Smart Tech Services SPC. All rights reserved.</p>
         <p>Oman | Advanced Technology & Digital Innovation</p>
         <p>D-U-N-S® is a registered trademark of Dun &amp; Bradstreet, Inc.</p>
-        <p style="margin-top: 10px; font-size: 0.85em; opacity: 0.9;">
+        <p style="margin-top: 15px; font-size: 0.85em; opacity: 0.9;">
             Specializing in AI, Mobile Applications, Advanced Electronics, IoT, Satellite Systems &amp; Digital Transformation
         </p>
     </footer>
 
-    <!-- D-U-N-S Registered Seal Script (HTTPS) -->
-    <script language="JavaScript" src="https://dunsregistered.dnb.com/dunsregistered.js" type="text/javascript"></script>
-
     <script>
+        async function handleSubmit(event) {
+            event.preventDefault();
+            const formStatus = document.getElementById('formStatus');
+            const submitBtn = document.getElementById('submitBtn');
+            
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                company: document.getElementById('company').value,
+                subject: document.getElementById('subject').value,
+                message: document.getElementById('message').value,
+                timestamp: new Date().toISOString()
+            };
+
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Sending...';
+
+            try {
+                const response = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        service_id: 'service_contact_form',
+                        template_id: 'template_contact',
+                        user_id: 'YOUR_EMAILJS_USER_ID',
+                        template_params: {
+                            to_email: 'borhani@iSmartGCC.com',
+                            from_name: formData.name,
+                            from_email: formData.email,
+                            phone: formData.phone,
+                            company: formData.company,
+                            subject: formData.subject,
+                            message: formData.message
+                        }
+                    })
+                });
+
+                if (response.ok) {
+                    formStatus.className = 'status-message success';
+                    formStatus.textContent = '✓ Thank you! Your message has been sent to borhani@iSmartGCC.com.';
+                    formStatus.style.display = 'block';
+                    document.getElementById('contactForm').reset();
+                } else {
+                    throw new Error('Failed to send email. Status: ' + response.status);
+                }
+            } catch (error) {
+                formStatus.className = 'status-message error';
+                formStatus.textContent = '⚠ Error: Could not send message. Please contact us directly at support@iSmartGCC.com.';
+                formStatus.style.display = 'block';
+                console.error('Error:', error);
+            } finally {
+                setTimeout(() => {
+                    formStatus.style.display = 'none';
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Send Message';
+                }, 6000);
+            }
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
         console.log('Smart Tech Services website loaded');
     </script>
 </body>
