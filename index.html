@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Tech Services SPC - Advanced Electronics & Digital Transformation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: linear-gradient(135deg, #1e3a5f 0%, #2c5aa0 100%);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+            color: white;
+        }
+
+        /* Navigation Menu */
+        nav {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+
+        nav a:hover {
+            opacity: 0.8;
+        }
+
+        /* Hamburger Menu - Hidden by default on desktop */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            flex-direction: column;
+            gap: 0.4rem;
+        }
+
+        .menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: white;
+            display: block;
+            transition: 0.3s;
+        }
+
+        /* MOBILE RESPONSIVE - CRITICAL FIX */
+        @media (max-width: 768px) {
+            /* Hide hamburger on load - DEFAULT STATE */
+            .menu-toggle {
+                display: flex;
+            }
+
+            /* Navigation hidden by default on mobile */
+            nav {
+                position: absolute;
+                top: 60px;
+                left: 0;
+                right: 0;
+                background: #1e3a5f;
+                flex-direction: column;
+                gap: 0;
+                padding: 1rem 0;
+                display: none; /* HIDDEN BY DEFAULT */
+                max-height: calc(100vh - 60px);
+                overflow-y: auto;
+            }
+
+            /* Show nav only when active class is applied */
+            nav.active {
+                display: flex;
+            }
+
+            nav a {
+                padding: 1rem 1.5rem;
+                border-bottom: 1px solid rgba(255,255,255,0.1);
+            }
+
+            nav a:hover {
+                background: rgba(255,255,255,0.1);
+            }
+
+            .header-container {
+                justify-content: space-between;
+            }
+
+            /* Hamburger animation when active */
+            .menu-toggle.active span:nth-child(1) {
+                transform: rotate(45deg) translate(10px, 10px);
+            }
+
+            .menu-toggle.active span:nth-child(2) {
+                opacity: 0;
+            }
+
+            .menu-toggle.active span:nth-child(3) {
+                transform: rotate(-45deg) translate(7px, -7px);
+            }
+        }
+
+        /* Main Content */
+        main {
+            margin-top: 70px;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #1e3a5f 0%, #2c5aa0 100%);
+            color: white;
+            padding: 4rem 1rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        .section {
+            margin: 3rem 0;
+        }
+
+        .section h2 {
+            font-size: 2rem;
+            color: #1e3a5f;
+            margin-bottom: 2rem;
+            border-bottom: 3px solid #2c9cde;
+            padding-bottom: 1rem;
+            display: inline-block;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
+
+        .card h3 {
+            color: #1e3a5f;
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            background: #1e3a5f;
+            color: white;
+            padding: 3rem 1rem;
+            margin-top: 4rem;
+            text-align: center;
+        }
+
+        footer h3 {
+            margin-bottom: 1rem;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .contact-item {
+            text-align: left;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .section h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">🚀 Smart Tech Services</a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav id="navMenu">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#products">Products</a>
+                <a href="#services">Services</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#location">Location</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <main>
+        <section class="hero" id="home">
+            <h1>Smart Tech Services SPC</h1>
+            <p>Advanced Electronics, Digital Transformation, Mobile Applications & Innovative Solutions</p>
+            <p><strong>D-U-N-S® Registered | Oman</strong></p>
+        </section>
+
+        <!-- About Section -->
+        <section class="container section" id="about">
+            <h2>About Smart Tech Services</h2>
+            <p>Smart Tech Services SPC is an innovation-focused technology company based in Oman. We develop advanced digital products, conduct cutting-edge research and development, and deliver practical technology solutions for businesses, educational institutions, and communities.</p>
+            <p>Our expertise spans multiple domains: advanced electronics, AI-powered applications, IoT solutions, satellite systems, and digital transformation initiatives. We combine software engineering, hardware innovation, data analytics, and user-centric design to address real-world challenges.</p>
+        </section>
+
+        <!-- Services Section -->
+        <section class="container section" id="services">
+            <h2>Our Services</h2>
+            <div class="content-grid">
+                <div class="card">
+                    <h3>🛰️ Satellite Systems</h3>
+                    <p>Satellite systems, CubeSat constellations, GeoLocator, and educational initiatives in space engineering.</p>
+                </div>
+                <div class="card">
+                    <h3>🤖 Advanced Research</h3>
+                    <p>Advanced research in AI, robotics, computer vision, emerging technologies, and cutting-edge innovation.</p>
+                </div>
+                <div class="card">
+                    <h3>📱 Smart Applications</h3>
+                    <p>Smart applications: iMedico, iCloset, iPCare, iTherapy, iConnect, and more on major app stores.</p>
+                </div>
+                <div class="card">
+                    <h3>🔌 IoT Solutions</h3>
+                    <p>Design and implementation of RFID systems, IoT devices, sensor technology, and smart solutions.</p>
+                </div>
+                <div class="card">
+                    <h3>💼 Consulting</h3>
+                    <p>Solution design, systems integration, technology consulting, vendor partnerships, and support.</p>
+                </div>
+                <div class="card">
+                    <h3>🔄 Digital Transformation</h3>
+                    <p>Digital transformation across multiple industries with proven implementation methodologies.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section class="container section" id="products">
+            <h2>Our Products & Solutions</h2>
+            <div class="content-grid">
+                <div class="card">
+                    <h3>24/7 Technical Support</h3>
+                    <p>24/7 technical assistance and ongoing maintenance for all our solutions and implementations.</p>
+                </div>
+                <div class="card">
+                    <h3>Advanced Analytics</h3>
+                    <p>Advanced analytics and insights to drive informed business decisions and optimize operations.</p>
+                </div>
+                <div class="card">
+                    <h3>Security Solutions</h3>
+                    <p>Comprehensive security solutions protecting your digital assets from emerging threats.</p>
+                </div>
+                <div class="card">
+                    <h3>Cloud Services</h3>
+                    <p>Scalable cloud infrastructure and services tailored to your business requirements.</p>
+                </div>
+                <div class="card">
+                    <h3>Training Programs</h3>
+                    <p>Professional training programs and skill development for your team and organization.</p>
+                </div>
+                <div class="card">
+                    <h3>Custom Solutions</h3>
+                    <p>Bespoke software and hardware solutions designed specifically for your business needs.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Credentials Section -->
+        <section class="container section" id="portfolio">
+            <h2>Our Credentials</h2>
+            <div class="card">
+                <p>Our company holds a comprehensive <strong>D-U-N-S® registration</strong>, confirming our credibility and commitment to professional business standards recognized globally by Dun & Bradstreet.</p>
+                <p style="margin-top: 1rem;"><strong>DUNS Number:</strong> 85-040-3286</p>
+                <p><strong>Business Registration:</strong> 1568459</p>
+                <p><strong>Valid:</strong> December 5, 2025 – December 4, 2028</p>
+            </div>
+        </section>
+
+        <!-- Location Section -->
+        <section class="container section" id="location">
+            <h2>Our Location</h2>
+            <div class="card">
+                <p><strong>Address:</strong> #12, Down Town, 1, 3933 Way, A2392, Al Khuwayr South, Muscat, Oman</p>
+                <p style="margin-top: 1rem;"><strong>Mobile & WhatsApp:</strong> +968 7912 8777</p>
+                <p><strong>Email:</strong> support@iSmartGCC.com</p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="container section" id="contact">
+            <h2>Get In Touch</h2>
+            <p>Have a question or want to discuss a project? Contact us and we'll get back to you within 24 hours.</p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <h3>📱 Mobile & WhatsApp</h3>
+                    <p>+968 7912 8777</p>
+                </div>
+                <div class="contact-item">
+                    <h3>📧 Email</h3>
+                    <p>support@iSmartGCC.com</p>
+                </div>
+                <div class="contact-item">
+                    <h3>📍 Address</h3>
+                    <p>#12, Down Town, 1, 3933 Way, A2392, Al Khuwayr South, Muscat, Oman</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <h3>Smart Tech Services SPC</h3>
+        <p><strong>🏢 Registration:</strong> Business Reg: 1568459 | DUNS: 85-040-3286</p>
+        <p style="margin-top: 1rem; opacity: 0.8;">&copy; 2025 Smart Tech Services SPC. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // MOBILE MENU FIX - Critical JavaScript
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        // Initialize: Ensure menu is CLOSED on page load
+        navMenu.classList.remove('active');
+        menuToggle.classList.remove('active');
+
+        // Toggle menu on hamburger click
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+        });
+
+        // Close menu when a link is clicked
+        const navLinks = navMenu.querySelectorAll('a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                menuToggle.classList.remove('active');
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('header')) {
+                navMenu.classList.remove('active');
+                menuToggle.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
